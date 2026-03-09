@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Gonçalves - Game Development Portfolio</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <!-- Generic/Desktop (16x16, 32x32, 48x48) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>[Diego Gonçalves]</h1>
+        <p>Game Developer | AI & Graphics Programmer</p>
+    </header>
+
+    <div class="container">
+        <section id="intro">
+            <h2>Welcome to my Portfolio!</h2>
+            <p>I am a Senior Unity Developer with over 7.5 years of experience architecting high-performance games and integrated backend systems. My career is defined by a balance of commercial success—including the BIG Brands Award-winning PSG Football Freestyle—and a deep academic foundation in computer vision and graphics programming.</p>
+            <!--<p>I'm a professional Game Programmer with over seven years of experience specializing in Unity (C#), AI systems**, and **advanced technical development**. My background includes leading teams on multiple commercial titles and deep academic research into **Real-Time Graphics (C++/OpenGL)** and **Deep Learning**.</p>-->
+            <p>This portfolio showcases my work across full-scale commercial game development, educational/serious games, and high-performance graphics projects, demonstrating my ability to deliver engaging experiences while solving complex technical challenges.</p>
+            <hr color="white">
+        </section>
+
+        <section id="professional-games">
+            <h2>🎮 Professional Game Development</h2>
+            <div class="project-grid">
+                <div class="project-card" id="batalha">
+                    <h3>Batalha da Dança</h3>
+                    <p>Role: Team Lead / AI Programmer</p>
+                    <p class="description">Summary: Led development and programmed advanced AI behavior, ensuring alignment with creative vision.</p>
+                    <!--<p class="description">Led development and implemented advanced AI behavior.</p>-->
+                    <div class="link-buttons">
+                        <a href="https://www.youtube.com/watch?v=ItpnIju2BP4" target="_blank" class="button primary">Watch Gameplay Video</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.umbugames.batalhadadanca" target="_blank" class="button secondary">View on Store</a>
+                        <button class="button secondary" onclick="toggleDetails(this)">More Details</button>
+                    <!--<a href="#" target="_blank" class="button primary">Watch Trailer/Gameplay</a>-->
+                    </div>
+                    <div class="details-content" style="display: none;">
+                        <hr>
+                        <h4>My Role & Technical Focus</h4>
+        
+                        <p>In the role of Team Lead for Batalha da Dança, I oversaw the successful implementation of core game mechanics while simultaneously designing and programming the **advanced AI systems** for enemy characters. This involved creating robust decision-making logic and efficient pathfinding solutions...</p>
+                        <p>I also collaborated closely with artists and designers to integrate assets and optimize performance, leading the team through testing and debugging for a polished release.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" id="pets-rules">
+                    <h3>Pets Rules</h3>
+                    <p>Role: Gameplay & Tool Development, AI & Performance improvements</p>
+                    <p class="description">Developed custom designer tools, implemented gameplay features, optimization.</p>
+                    <div class="link-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.umbugames.petsrules" target="_blank" class="button secondary">View on Store</a>
+                        <a href="https://www.youtube.com/watch?v=oVP4sXe_a0k" target="_blank" class="button primary">Watch Gameplay Trailer</a>
+                        <button class="button secondary" onclick="toggleDetails(this)">More Details</button>
+                    </div>
+                    <div class="details-content" style="display: none;">
+                        <hr>
+                        <h4>My Role & Technical Focus</h4>
+                        <ul>
+                            <li><strong>Gameplay Mechanics:</strong> Implemented physics-based interaction systems for the "chaos sandbox" environment, focusing on reactive object behavior.</li>
+                            <li><strong>AI Development:</strong> Created behavior trees for NPC "Guardians" to respond dynamically to player-triggered environmental changes.</li>
+                            <li><strong>Custom Tools:</strong> Developed Unity Editor extensions to allow designers to balance gameplay values without direct code intervention.</li>
+                            <li><strong>Build Pipeline:</strong> Established an automated CI/CD pipeline for Android/iOS, significantly reducing deployment times for QA.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card" id="psg-football">
+                    <h3>PSG Football Freestyle</h3>
+                    <p>Role: Unity 3D Programmer</p>
+                    
+                    <p class="description">Gameplay, backend (PlayFab) integration, BIG Brands Award Winner.</p>
+                    <a href="#" target="_blank" class="button primary">Watch Promotional Video</a>
+                </div>
+            </div>
+        </section>
+        
+        <!--<section id="serious-games">
+            <h2>🧠 Serious Games & Gamification</h2>
+            </section>-->
+        <section id="serious-games">
+            <h2>🧠 Serious Games & Gamification</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Educa Money</h3>
+                    <p>Role: Mobile Port & Backend Developer</p>
+                    <p class="description">Successfully ported the educational title to **iOS and Android**; implemented the server backend for secure user progress.</p>
+                    <a href="#" target="_blank" class="button primary">View Video/Store Link</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Lendo+</h3>
+                    <p>Role: C# Programmer & Game Designer</p>
+                    <p class="description">Literature-based quiz aimed at improving literacy; responsible for Facebook integration and online service for player profiles.</p>
+                    <a href="#" target="_blank" class="button primary">View Video/Store Link</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Donnie Project</h3>
+                    <p>Role: Research Assistant</p>
+                    <p class="description">Applied **Deep Learning** for computer vision to help visually impaired students learn programming.</p>
+                    <a href="https://doi.org/10.5753/wvc.2020.13492" target="_blank" class="button primary">Read Published Paper</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="technical-projects">
+            <h2>🔬 Advanced Technical & Graphics Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Real-Time Graphics Research</h3>
+                    <p>Role: Researcher & Developer</p>
+                    <p class="description">Conducted research in real-time graphics, resulting in published papers and prototypes demonstrating novel rendering techniques.</p>
+                    <a href="https://www.researchgate.net/publication/123456789_Real-Time_Graphics_Techniques" target="_blank" class="button primary">Read Published Paper</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>AI Systems for Games</h3>
+                    <p>Role: AI Programmer & Designer</p>
+                    <p class="description">Designed and implemented complex AI systems for various game projects, focusing on behavior trees, pathfinding, and decision-making algorithms.</p>
+                    <a href="#" target="_blank" class="button primary">View Technical Blog Post</a>
+                </div>
+            </section>
+    </div>
+
+    <footer>
+        <p>Contact: [Your Email Address] | CV available upon request.</p>
+    </footer>
+</body>
+</html>

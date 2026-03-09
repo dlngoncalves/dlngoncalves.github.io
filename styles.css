@@ -1,0 +1,171 @@
+#batalha {
+    --img: url('batalha.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#pets-rules {
+    --img: url('pets.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#psg-football {
+    --img: url('psg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:  #2275D7;
+    color: #ffffff;
+}
+
+header {
+    background:#4a90e2; /* A professional blue */
+    color: #000000;
+    padding: 2em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.1em;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    /* color: #E29C4A; */
+    color: #000000;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(auto-fit,300px);
+    justify-content: center;
+    align-items: start;
+    gap: 80px;
+}
+
+.project-card {
+    /* --overlay: rgba(0, 0, 0, 0.8); 
+    --img: url('deluge.jpg');
+    background-image: linear-gradient(var(--overlay), var(--overlay)), var(--img);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-attachment: fixed; 
+    transition: transform 0.2s; */
+    position: relative;
+    overflow: hidden; /* Clips the expanded content if needed */
+    /* padding: 20px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* Your original card height */
+    width: 300px; /* LOCK the card width here */
+    --overlay: rgba(0, 0, 0, 0.8); 
+    --img: url('deluge.jpg');
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px; /* LOCK the image height here */
+
+    background-image: linear-gradient(var(--overlay), var(--overlay)), var(--img);
+    background-size: cover;
+    background-position: center;
+    /* transition: transform 0.2s; */
+     z-index: -1;
+}
+
+.details-content {
+    margin-top: 0px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #4a90e2;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+     --overlay: rgba(0, 0, 0, 0.5);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.description {
+    font-style: italic;
+    color: #bbbbbb;
+    min-height: 40px; /* Ensures consistent card height */
+}
+
+.button {
+    display: inline-block;
+    background: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #3a7bd5;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    background: #4a90e2;
+    color: #000000;
+}
+
+.link-buttons {
+    margin-top: 15px;
+}
+
+.secondary {
+    background: #6c757d; /* A subtle grey */
+    margin-left: 10px; /* Space between the two buttons */
+    border: none;
+    cursor: pointer;
+}
+
+.secondary:hover {
+    background: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

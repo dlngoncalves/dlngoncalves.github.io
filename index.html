@@ -163,12 +163,45 @@
         <section id="serious-games">
             <h2>🧠 Serious Games & Gamification</h2>
             <div class="project-grid">
-
-                <div class="project-card">
-                    <h3>Educa Money</h3>
-                    <p>Role: Mobile Port & Backend Developer</p>
-                    <p class="description">Successfully ported the educational title to **iOS and Android**; implemented the server backend for secure user progress.</p>
-                    <a href="#" target="_blank" class="button primary">View Video/Store Link</a>
+                <div class="project-card" id="educa">
+                    <video class="card-bg-video" autoplay muted loop>
+                        <source src="educa.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-content">
+                        <h3>Educa Money</h3>
+                        <p class="role">Role: Lead Backend & Porting Engineer</p>
+                        <p class="description">Managed the technical infrastructure for an educational math and finance game, architecting the Node.js/MariaDB backend and leading the technical migration from PC to Mobile platforms..</p>
+                        <div class="link-buttons-educa">
+                            <a href="https://www.educahub.com.br/educa-money"target="_blank" class="button primary">Game Website</a>
+                            <a href="https://apps.apple.com/br/app/educa-money/id6476522311" target="_blank" class="button primary">App Store</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.UmbuGames.EducaMoneyEscolas" target="_blank" class="button primary">Google Play</a>
+                            <button class="button secondary-educa" onclick="toggleDetails(this)">More Details</button>
+                        </div>
+                    </div>
+                    <div class="details-content" style="display: none;">
+                        <div class="more-info-panel">
+                            <div class="video-wrapper" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                                <iframe 
+                                src="https://www.youtube.com/embed/xMPD0PA7NgE"
+                                loading="lazy"
+                                title="Trailer - Educa Money"
+                                style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+                                frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <hr>
+                            <h4>My Role & Technical Focus</h4>
+                            <p>On EducaMoney, I focused on the platform infrastructure and the data pipeline required to turn a math-learning game for children into a viable classroom tool. My primary responsibility was the full-stack architecture, ensuring student data was handled securely via a cloud-hosted backend and leading the technical refactoring required to bring the desktop experience to mobile devices.</p>
+                            <p>Beyond architecting the backend and leading the mobile port, I developed a Visual Analytics system that allowed teachers to monitor student progress in real-time. By leveraging Azure Data Explorer and KQL, I transformed raw gameplay data into actionable insights for educators—directly applying my academic research in Visual Analytics to a commercial product.</p>
+                            <p>I also implemented the accessibility frameworks that allowed the game to be used by students with visual impairments.</p>
+                            <ul>
+                                <li><strong>Visual Analytics & KQL:</strong> Engineered a data-monitoring tool using Azure Data Explorer and KQL, enabling teachers to track learning milestones and measure pedagogical outcomes.</li>
+                                <li><strong>Backend Engineering:</strong> Developed and deployed the Node.js/MariaDB infrastructure on Azure and AWS to handle player progress and data synchronization.</li>
+                                <li><strong>Platform Migration:</strong> Refactored the core code to ensure stable performance and UI scaling during the port from PC to Mobile.</li>
+                                <li><strong>Accessibility Implementation:</strong> Engineered specialized UI and audio systems to make math and money concepts accessible to visually impaired students.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="project-card">

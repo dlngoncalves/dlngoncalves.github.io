@@ -16,6 +16,12 @@
     background-position: center;
 }
 
+#educa {
+    --img: url('educa.png');
+    background-size: cover;
+    background-position: center;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -249,6 +255,13 @@ section h2 {
     margin-bottom: 10px;
 }
 
+.link-buttons-educa {
+    margin-left: 13px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+
 /*margin: 0 auto; /* Centers the container */
 .secondary {
     background: #6c757d; /* A subtle grey */
@@ -256,6 +269,15 @@ section h2 {
     /* border: none; */
     margin-top: 20px;
     margin-left:80px;
+    cursor: pointer;
+}
+
+.secondary-educa {
+    background: #6c757d; /* A subtle grey */
+    /* margin-left: 10px; Space between the two buttons */
+    /* border: none; */
+    margin-top: 40px;
+    margin-left:110px;
     cursor: pointer;
 }
 

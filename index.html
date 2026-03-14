@@ -119,24 +119,40 @@
                 </div>
                 
                 <div class="project-card" id="psg-football">
-                    <h3>PSG Football Freestyle</h3>
-                    <p class="role">Role: Unity 3D Programmer</p>
-                    <p class="description">Gameplay, backend (PlayFab) integration, BIG Brands Award Winner.</p>
-                    <div id="tiny_white_space"></div>
-                    <div id="tiny_white_space"></div>
-                    <div id="tiny_white_space"></div>
-                    <div id="tiny_white_space"></div>
-                    <div id="tiny_white_space"></div>
-                    <div class="link-buttons">
-                        <a href="" target="_blank" class="button primary"></a>
-                        <a href="https://www.youtube.com/watch?v=7E2mfVbQnCk" target="_blank" class="button primary">Watch Promotional Video</a>
-                        <button class="button secondary" onclick="toggleDetails(this)">More Details</button>
+                    <video class="card-bg-video" autoplay muted loop>
+                        <source src="psg.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-content">
+                        <h3>PSG Football Freestyle</h3>
+                        <p class="role">Role: Unity 3D Programmer</p>
+                        <p class="description">Lead developer for the "Best BIG Brands Game" award-winning mobile title at the 2018 BIG Festival. Engineered core gameplay mechanics and internal tools for our designer. Also worked on integration with the PlayFab backend.</p>
+                        <div class="link-buttons">
+                            <a href="" target="_blank" class="button primary"></a>
+                            <a href="https://www.youtube.com/watch?v=7E2mfVbQnCk" target="_blank" class="button primary">Watch Promotional Video</a>
+                            <button class="button secondary" onclick="toggleDetails(this)">More Details</button>
+                        </div>
                     </div>
                     <div class="details-content" style="display: none;">
-                        <hr>
-                        <h4>My Role & Technical Focus</h4>
-                        <p>As a Unity 3D Programmer on PSG Football Freestyle, I was responsible for implementing core gameplay mechanics and integrating the PlayFab backend for player data management. My work contributed to the game's success, culminating in winning the prestigious BIG Brands Award.</p>
-                        <p>Key contributions included optimizing performance for mobile platforms and collaborating with designers to create engaging football freestyle mechanics that resonated with players worldwide.</p>
+                        <div class="more-info-panel">
+                            <div class="video-wrapper" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                                <iframe 
+                                src="https://www.youtube.com/embed/7E2mfVbQnCk"
+                                loading="lazy"
+                                title="PSG Football Freestyle Gameplay"
+                                style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+                                frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <hr>
+                            <h4>My Role & Technical Focus</h4>
+                            <p>For this high-profile licensed IP, I served as Chief Gameplay programmer, focusing on the intersection of player input and visual fidelity. I was tasked with bridging the gap between high-fidelity freestyle football movements, responsive mobile controls, and the complex trick combinations we needed. My primary challenge was ensuring the gameplay felt exceptionally responsive; this required engineering a high-performance animation integration that handled seamless, smooth transitions between complex freestyle tricks based on real-time player actions.</p>
+                            <ul>
+                                <li><strong>Gameplay Architecture:</strong> Architected the core gameplay loop that led to the BIG Brands Award at BIG Festival 2018.</li>
+                                <li><strong>Transition Engineering:</strong> Developed a custom animation integration system to manage fluid state transitions, ensuring player actions translated into natural-looking movements and correct trick execution.</li>
+                                <li><strong>Live-Service Infrastructure:</strong> Helped Integrated Microsoft Azure PlayFab to manage player data, leaderboards, and backend synchronization.</li>
+                                <li><strong>Internal Tooling:</strong> Built internal Unity Editor tools that streamlined the the content creation pipeline for our designer.</li>
+                            </ul>
+                        </div>
                     </div>
             </div>
         </section>

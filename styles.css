@@ -31,6 +31,31 @@ header {
     text-align: center;
 }
 
+nav ul {
+  display: flex;       /* Arrange items in a row */
+  flex-wrap: wrap;     /* Allow items to move to the next line */
+  justify-content: center; /* Center the menu items */
+  list-style: none;    /* Remove the bullet points */
+  padding: 0;          /* Remove default browser padding */
+  margin: 20px auto;   /* Add some vertical space and center the container */
+  gap: 15px 25px;      /* Vertical gap: 15px, Horizontal gap: 25px */
+  max-width: 1200px;   /* Keep the menu from getting too wide on huge screens */
+}
+
+nav li {
+  white-space: nowrap; /* CRITICAL: Prevents "Serious Games" from breaking into two lines */
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;         /* Adjust color to match your design */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 header nav ul {
     list-style: none; /* Removes the dots/bullets */
     padding: 0;       /* Removes that default left-side spacing */
@@ -116,6 +141,7 @@ section h2 {
     --overlay: rgba(0, 0, 0, 0.8); 
     --img: url('deluge.jpg');
     transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 0; /* Ensures the card is above the ::before background layer */
 }
 
 .project-card::before{
@@ -130,7 +156,36 @@ section h2 {
     background-size: cover;
     background-position: center;
     /* transition: transform 0.2s; */
-     z-index: -1;
+     z-index: 1; /* Sits below the card content but above the card background */
+}
+
+.card-bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 300px;
+  object-fit: cover; /* Prevents stretching */
+  z-index: 2; /* Sits above the image but below text */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* The fix: Force the text to the front */
+.project-card .card-content {
+  position: relative; /* z-index only works on positioned elements */
+  z-index: 5; /* Highest layer: always above the video */
+  pointer-events: none; /* Optional: lets mouse clicks "pass through" to the card/buttons */
+}
+
+.project-card .card-content a,
+.project-card .card-content p,
+.project-card .card-content h3,
+.project-card .card-content button {
+  pointer-events: auto;
+}
+
+.project-card:hover .card-bg-video {
+  opacity: 0.5;
 }
 
 .details-content {
@@ -144,7 +199,7 @@ section h2 {
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-     --overlay: rgba(0, 0, 0, 0.5);
+     --overlay: rgba(0, 0, 0, 1);
 }
 
 .project-card h3 {

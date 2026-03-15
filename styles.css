@@ -22,6 +22,12 @@
     background-position: center;
 }
 
+#lendo {
+    --img: url('lendo.png');
+    background-size: cover;
+    background-position: center;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -150,6 +156,7 @@ section h2 {
     z-index: 0; /* Ensures the card is above the ::before background layer */
 }
 
+
 .project-card::before{
     content: "";
     position: absolute;
@@ -230,6 +237,32 @@ section h2 {
     /* padding: 5px 5px 15px 5px; Adds padding around the description */
 }
 
+.note{
+    font-variant: small-caps;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.note-link{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.note-tooltip {
+    cursor: help; /* Changes cursor to a question mark/pointer */
+    color: #888; /* Subtle gray so it doesn't distract from the title */
+    font-size: 0.8em;
+    vertical-align: super; /* Keeps it as a superscript */
+    padding: 0 4px;
+    border-bottom: 1px dotted #888; /* Visual cue that it's interactive */
+}
+
+.note-tooltip:hover {
+    color: #3498db; /* Changes color on hover to show it's active */
+    border-bottom: 1px solid #3498db;
+}
+
 .button {
     display: inline-block;
     background: #4a90e2;
@@ -280,6 +313,16 @@ section h2 {
     margin-left:110px;
     cursor: pointer;
 }
+
+.secondary-lendo {
+    background: #6c757d; /* A subtle grey */
+    /* margin-left: 10px; Space between the two buttons */
+    /* border: none; */
+    margin-top: 40px;
+    margin-left:125px;
+    cursor: pointer;
+}
+
 
 .secondary:hover {
     background: #5a6268;

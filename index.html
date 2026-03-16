@@ -390,24 +390,11 @@
     <footer id="contact">
         <h2>Contact</h2>
         <form action="https://formspree.io/f/mvzwkqdl" method="POST">
-        <!-- <label>
-            Your email:
-            <input type="email" name="email" required>
-        </label> -->
+            <input type="hidden" name="_next" value="https://dlngoncalves.github.io/thanks.html">
             <div class="form-group">
                 <label for="email">Your email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-        <!-- <label>
-            Subject:
-            <select name="subject" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="Work Opportunity">Work Opportunity</option>
-                <option value="Technical Question">Technical Question</option>
-                <option value="Project Collaboration">Project Collaboration</option>
-                <option value="Other">Other</option>
-            </select>
-        </label>         -->
             <div class="form-group">
                 <label for="subject">Subject:</label>
                 <select id="subject" name="subject" required>
@@ -418,16 +405,12 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
-        <!-- <label>
-            Your message:
-            <textarea name="message" required></textarea>
-        </label> -->
             <div class="form-group">
                 <label for="message">Your message:</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" id="contact_me">Send Message</button>
         </form>
     </footer>
 </body>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Gonçalves - Game Development Portfolio</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <!-- Generic/Desktop (16x16, 32x32, 48x48) -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script src="script.js"></script>
 </head>
@@ -157,10 +156,7 @@
                     </div>
             </div>
         </section>
-        
-        <!--<section id="serious-games">
-            <h2>🧠 Serious Games & Gamification</h2>
-            </section>-->
+
         <section id="serious-games">
             <h2>🧠 Serious Games & Gamification</h2>
             <div class="project-grid">
@@ -242,72 +238,196 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>Donnie Project</h3>
-                    <p>Role: Research Assistant</p>
-                    <p class="description">Applied **Deep Learning** for computer vision to help visually impaired students learn programming.</p>
-                    <a href="https://doi.org/10.5753/wvc.2020.13492" target="_blank" class="button primary">Read Published Paper</a>
-                </div>
-
+                <div class="project-card" id="donnie">
+                    <video class="card-bg-video" autoplay muted loop>
+                        <source src="donnie.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-content">
+                        <h3>Donnie Project</h3>
+                        <p class="role">Role: <span style="font-size: 0.8em;">Research assistant and Machine Learning Engineer</span></p>
+                        <p class="description"><span style="font-size:0.9em;">Developed a CNN-powered vision system for the Donnie robot, allowing it to detect and interpret physical Braille characters; thus enabling a tactile-to-digital interface for students to interact with their environment.</span></p>
+                        <div class="link-buttons-donnie">
+                            <a href="https://doi.org/10.5753/wvc.2020.13492" style="display: inline-block; padding-top:3px; padding-bottom: 3px;" target="_blank" class="button primary">Read Published Paper</a>
+                            <a href="https://www.youtube.com/embed/BRXAqvGPGmU" style="display: inline-block; margin-left:20px; padding-top:3px; padding-bottom: 3px;" target="_blank" class="button primary">Watch the robot in action</a>
+                            <button class="button secondary-lendo" onclick="toggleDetails(this)">More Details</button>
+                        </div>
+                    </div>
+                    <div class="details-content" style="display: none;">
+                        <div class="more-info-panel">
+                            <div class="video-wrapper" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                                <iframe 
+                                src="https://www.youtube.com/embed/BRXAqvGPGmU"
+                                loading="lazy"
+                                title="Donnie Robot - Physical robot vs simulated robot"
+                                style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+                                frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <hr>
+                            <h4>My Role & Technical Focus</h4>
+                            <p>Donnie was designed from the ground up to teach programming to visually impaired students. One of the projects goals was giving the robot the ability to read Braille characters. My role was to provide the robot's 'sight'.</p>
+                            <p>After unsuccessful attempts with printed characters due to the requirements of the project, our team created a set of large blocks with holes plus pins, which could be used to simulate large scale Braille characters.</p>
+                            <p>I then developed a vision-to-logic pipeline that used a custom-trained Convolutional Neural Network (CNN) to detect and classify these Braille characters in real-time.</p>
+                            <p>To achieve this, our team engineered a unique dataset of 2,800+ labeled images, overcoming classroom challenges like erratic lighting and camera angles.</p>
+                            <p>This research was published at WVC 2020 and has since been cited 13 times as a performance benchmark for assistive robotics.</p>
+                            <ul>
+                                <li><strong>Computer Vision Pipeline:</strong> Optimized a CNN for real-time inference on the robot's onboard hardware, achieving a 92.3% accuracy rate.</li>
+                                <li><strong>Dataset Architecture:</strong> Created and published a novel dataset of <b>2,818 labeled Braille images</b>, filling a critical data gap in the research community.</li>
+                                <li><strong>Tactile-to-Digital Interface:</strong> Engineered the software bridge that translates physical Braille blocks (tactile) into executable digital code (digital).</li>
+                                <li><strong>Academic Impact:</strong> Authored peer-reviewed published research on CNN-based Braille detection (WVC 2020), currently cited by 13 international researchers in Springer Nature, IEEE, and other high-impact venues as a performance benchmark for assistive computer vision.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>                    
             </div>
+
         </section>
 
         <section id="technical-projects">
-            <h2>🔬 Advanced Technical & Graphics Projects</h2>
+            <h2>🔬 Advanced Real-Time Graphics Projects in Rendering and Data Visualization</h2>
             <div class="project-grid">
 
-                <div class="project-card">
-                    <h3>Real-Time Graphics Research</h3>
-                    <p>Role: Researcher & Developer</p>
-                    <p class="description">Conducted research in real-time graphics, resulting in published papers and prototypes demonstrating novel rendering techniques.</p>
-                    <a href="https://www.researchgate.net/publication/123456789_Real-Time_Graphics_Techniques" target="_blank" class="button primary">Read Published Paper</a>
+                <div class="project-card" id="raytracer">
+                    <video class="card-bg-video" autoplay muted loop>
+                        <source src="raytracer.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-content">
+                        <h3>Hybrid Real-Time Raytracer</h3>
+                        <p class="role">Role: Research & Graphics Programmer</p>
+                        <p class="description">Developed a custom hybrid rendering engine in C++ and OpenGL, combining rasterization (Deferred Shading) with GLSL-based ray tracing to achieve real-time reflections and shadows on mid-range(circa 2015) hardware.</p>
+                        <div class="link-buttons" span style="margin-left:40px;">
+                            <a href="raytracer.pdf" target="_blank" class="button primary">Read Paper</a>
+                            <a href="https://youtu.be/wii0Wm8qu98?si=-SA9efU_ux0YG7R0" target="_blank" class="button primary">Watch Video</a>
+                            <a href="https://bitbucket.org/dlngoncalves/hybridraytracer" target="_blank" class="button primary">Code</a>
+                            <button class="button secondary" onclick="toggleDetails(this)" span style="margin-left:80px;">More Details</button></span>
+                        </div></span>
+                    </div>
+                    <div class="details-content" style="display: none;">
+                        <div class="more-info-panel">
+                            <div class="video-wrapper" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                                <iframe
+                                src="https://www.youtube.com/embed/ibcUo-Ra5lo"
+                                loading="lazy"
+                                title="Hybrid Real-Time Raytracer"
+                                style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+                                frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <hr>
+                            <h4>My Role & Technical Focus</h4>
+                            <p>Long before hardware-accelerated ray tracing became an industry standard via APIs like DXR, I developed a custom hybrid rendering engine from scratch as my undergraduate final project to explore real-time GI techniques.</p>
+                            <p>This project optimized the traditional ray tracing pipeline by utilizing Deferred Shading. I rasterized primary visibility to a G-Buffer, eliminating the first level of recursion, and passed the scene geometry to the GPU via Shader Storage Buffer Objects (SSBOs).</p>
+                            <p>From there, I wrote custom iterative ray-intersection logic in GLSL fragment shaders to calculate mathematically accurate shadows and multi-bounce reflections.</p>
+                            <ul>
+                                <li><strong>Custom Rendering Pipeline:</strong> Architected a hybrid raster/ray-traced engine from the ground up using <b>C++</b> and <b>OpenGL</b>, explicitly managing framebuffers and G-Buffer textures.</li>
+                                <li><strong>Low-Level Shader Logic:</strong> Implemented the <b>Möller-Trumbore</b> ray-triangle intersection algorithm entirely within <b>GLSL fragment shaders</b>, adapting standard recursive ray tracing into an iterative GPU-friendly format.</li>
+                                <li><strong>Memory & Data Bridging:</strong> Utilized <b>SSBOs (Shader Storage Buffer Objects)</b> to efficiently stream dynamic scene geometry, material arrays, and light data from the CPU to the GPU.</li>
+                                <li><strong>Performance Architecture:</strong> Demonstrated that the hybrid deferred approach yielded an <b>83% performance improvement</b> over a pure ray-traced baseline on mid-range hardware of the time (Radeon R7 260x).</li>
+                                <li><strong>Academic Recognition:</strong> Research selected for the "Workshop G2" at the <b>SBGames 2017 Computing Track</b>, showcasing deep proficiency in low-level graphics APIs.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="project-card" id="trajvis">
+                    <video class="card-bg-video" autoplay muted loop>
+                        <source src="trajvis.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-content">
+                        <h3>TrajVis <span style="font-size: 0.6em;">High-Performance Real-Time Visual Analytics of Multivariate Trajectory Data</span></h3>
+                        <p class="role"><span style="font-size: 0.8em;">Role: Master's Researcher & Lead Developer (PUCRS)</span></p>
+                        <p class="description">Developed a specialized visual analytics system capable of rendering and analyzing massive multivariate trajectory datasets (24M+ points) in real-time.</p>
+                        <div class="link-buttons">
+                            <a href="diego_goncalves_dissertacao.pdf" target="_blank" class="button primary">Dissertation</a>
+                            <a href="https://www.youtube.com/watch?v=cRhQ4xPGJWs" target="_blank" class="button primary">Video</a>
+                            <a href="https://bitbucket.org/dlngoncalves/trajvis" target="_blank" class="button primary">Code</a>
+                            <button class="button secondary" onclick="toggleDetails(this)">More Details</button>
+                        </div>
+                    </div>
+                    <div class="details-content" style="display: none;">
+                        <div class="video-wrapper" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                            <iframe
+                            src="https://www.youtube.com/embed/cRhQ4xPGJWs"
+                            loading="lazy"
+                            title="Real-Time Visual Analytics of Multivariate Trajectory Data"
+                            style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+                            frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <hr>
+                        <h4>My Role & Technical Focus</h4>
+                        <p>To solve the "visual clutter" and performance bottlenecks common in geospatial analysis, this project moved beyond standard CPU-bound methods.</p>
+                        <p>By architecting a custom GPU-based pipeline, the tool enables analysts to interactively filter, cluster, and map complex attributes (like weather and speed) across millions of data points without losing interactive frame rates.</p>
+                        <ul>
+                            <li><strong>Custom GPU Pipeline:</strong> Engineered a pipeline that offloads attribute mapping and multivariate filtering to <b>GPU shaders</b>, maintaining interactive performance even when processing datasets exceeding 5 million active points</li>
+                            <li><strong>Advanced Geometry Rendering:</strong> Developed a <b>custom line-rendering routine</b> using <b>geometry shaders</b> to overcome default <b>OpenGL</b> limitations, ensuring seamless segment joins and eliminating visual artifacts during high-zoom interactions.</li>
+                            <li><strong>TRACLUS Implementation:</strong> Integrated the Partition-and-Group framework (<b><a href="https://dl.acm.org/doi/epdf/10.1145/1247480.1247546" target="_blank">TRACLUS</a></b>) to cluster raw trajectories into representative paths, significantly reducing visual complexity and revealing latent behavioral patterns</li>
+                            <li><strong>Multi-Source Data Fusion:</strong> Architected a system to enrich raw GPS data with external environment variables (via <b>DarkSky/MapBox APIs</b>), enabling complex queries such as "Bicycle commute patterns in temperatures below 0°C"</li>
+                            <li><strong>Geospatial Visualization:</strong> Implemented a tile-based map system using elevation heightmaps for vertex displacement, providing a 3D topographic context for trajectory analysis.</li>
+                        </ul>
+                    </div>
 
-                <div class="project-card">
-                    <h3>AI Systems for Games</h3>
-                    <p>Role: AI Programmer & Designer</p>
-                    <p class="description">Designed and implemented complex AI systems for various game projects, focusing on behavior trees, pathfinding, and decision-making algorithms.</p>
-                    <a href="#" target="_blank" class="button primary">View Technical Blog Post</a>
                 </div>
         </section>
         
         <section id="about_me">
             <h2>About me</h2>
-            <!-- <p>I am a Senior Unity Developer with over 7.5 years of experience architecting high-performance games and integrated backend systems. My career is defined by a balance of commercial success—including the BIG Brands Award-winning PSG Football Freestyle—and a deep academic foundation in computer vision and graphics programming.</p> -->
-            <!--<p>I'm a professional Game Programmer with over seven years of experience specializing in Unity (C#), AI systems**, and **advanced technical development**. My background includes leading teams on multiple commercial titles and deep academic research into **Real-Time Graphics (C++/OpenGL)** and **Deep Learning**.</p>-->
-            <!-- <p>This portfolio showcases my work across full-scale commercial game development, educational/serious games, and high-performance graphics projects, demonstrating my ability to deliver engaging experiences while solving complex technical challenges.</p> -->
-            <p>I am a Senior Software Engineer and Game Developer currently based in Porto Alegre, Brazil. I have over 6 years of professional experience in the Games Industry, primarily as a Unity Developer.
-            My career is defined by the strategic integration of a deep academic foundation in Visual Analytics and Computer Graphics with a proven track record of architecting high-performance commercial games and scalable backend systems.</p>
-            <ul>
-                <li>Academic Foundation: I hold a Master’s degree in Computer Science with a focus on data-intensive fields, including Visual Analytics, Big Data, and Machine Learning. For my dissertation, I developed a specialized Visual Analytics tool designed to process and visualize large volumes of multivariate trajectory data.</li>
-                    <ul>
-                        <li>This tool was built using C# and WPF, leveraging Azure Data Explorer for backend data processing and KQL for querying. The project not only demonstrated my ability to handle complex data visualization challenges but also provided insights into user interaction with large datasets, which has informed my approach to game development and user experience design.</li>
-                    </ul>
-                <li>Professional Impact: I have a proven track record of leading teams and delivering complex commercial projects. My work on Pets Rules involved developing custom designer tools and optimizing mobile build pipelines, while my contributions to PSG Football Freestyle - winner of the BIG Festival 2018's "Brands Award" - focused on core gameplay programming, PlayFab backend integration and custom designer tools.
-                    Finally, in the project Educa Money, I developed the entire backend infrastructure. For this project, I also developed an advanced Visual Analytics solution, using Azure Data Explorer and the KQL language, drawing insights from my experience studing Visual Analytics in academia.</li>
-                <li></li>
-            </ul>
+            <p>I am a Senior Software Engineer and Game Developer currently based in Porto Alegre, Brazil. I have over 6 years of professional experience in the Games Industry, primarily as a Unity Developer. My career is defined by the strategic integration of a deep academic foundation in Visual Analytics and Computer Graphics with a proven track record of architecting high-performance commercial games and scalable backend systems.<p>
+                <h3>Academic Foundation & Research</h3> 
+                <p>I hold a Master's degree in Computer Science with a specialization in Visual Analytics, Big Data, and Machine Learning. For my dissertation, I developed TrajVis, a high-performance visual analytics tool capable of rendering millions of multivariate data points in real-time. Built with C++ and OpenGL, the tool utilizes a custom GPU-based pipeline and shader programs to solve performance bottlenecks in geospatial analysis.</p>
+                <p>My research has achieved significant academic recognition, including:</p>
+                <p>SBGames 2017 Award: My undergraduate final project—a hybrid real-time raytracer using GLSL ray-intersection logic—was selected for the SBGames Computing Track.</p>
+                <p>International Impact: My work on assistive robotics and Braille detection (WVC 2020) has been cited by international researchers in journals such as Springer Nature and within the IEEE ecosystem.</p>
+                <h3>Professional Impact</h3>
+                <p>I have a proven record of technical leadership and full-cycle product delivery. As a Senior Developer at Umbu Games, I managed complex mobile build pipelines, architected and implemented gameplay systems, produced custom designer tools, and optimized our games to work on low-end mobile hardware for titles like Pets Rules. I did this while also mentoring junior developers and interns to foster a high-performing engineering culture.</p>
+                <p>My work extends deeply into backend and data architecture; for the project Educa Money, I developed the entire backend infrastructure. For this project, I also developed a custom Visual Analytics solution, using Azure Data Explorer and the KQL language. Drawing on my academic background in data science, this tool allowed stakeholders to derive actionable insights from complex user behavior.</p>
+                <p>I served as a core gameplay programmer for PSG Football Freestyle (Winner of the BIG Festival 2018 "Brands Award"), while also working on Playfab backend integration and developed bespoke tools to streamline the design workflow.</p>
             <hr color="white">
         </section>
 
     </div>
 
     <footer id="contact">
-        <p>Contact:</p>
-        <form
-        action="https://formspree.io/f/mvzwkqdl"
-        method="POST"
-        >
-        <label>
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/mvzwkqdl" method="POST">
+        <!-- <label>
             Your email:
-            <input type="email" name="email">
-        </label>
-        <label>
+            <input type="email" name="email" required>
+        </label> -->
+            <div class="form-group">
+                <label for="email">Your email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        <!-- <label>
+            Subject:
+            <select name="subject" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Work Opportunity">Work Opportunity</option>
+                <option value="Technical Question">Technical Question</option>
+                <option value="Project Collaboration">Project Collaboration</option>
+                <option value="Other">Other</option>
+            </select>
+        </label>         -->
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Work Opportunity">Work Opportunity</option>
+                    <option value="Technical Question">Technical Question</option>
+                    <option value="Project Collaboration">Project Collaboration</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        <!-- <label>
             Your message:
-            <textarea name="message"></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
+            <textarea name="message" required></textarea>
+        </label> -->
+            <div class="form-group">
+                <label for="message">Your message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
         </form>
     </footer>
 </body>

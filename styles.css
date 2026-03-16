@@ -28,6 +28,24 @@
     background-position: center;
 }
 
+#donnie {
+    --img: url('donnie.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#raytracer {
+    --img: url('raytracer.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#trajvis {
+    --img: url('trajvis.png');
+    background-size: cover;
+    background-position: center;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -295,6 +313,15 @@ section h2 {
     margin-bottom: 10px;
 }
 
+.link-buttons-donnie {
+    margin-left: 12px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+
 /*margin: 0 auto; /* Centers the container */
 .secondary {
     background: #6c757d; /* A subtle grey */
@@ -336,52 +363,115 @@ section h2 {
     color: #000000;
 } */
 
-
 footer {
-    padding: 50px 20px;
+    padding: 100px 20px;
     background-color: #2c3e50; /* A deep professional blue/grey */
     color: white;
-    text-align: center;
-}
-
-footer form {
-    max-width: 500px;
-    margin: 0 auto; /* Centers the form */
+    /* text-align: center; */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Spacing between fields */
+    justify-content: center; /* Centers form vertically in the viewport */
+    box-sizing: border-box;
+    scroll-margin-top: 5000px;
+}
+
+/* footer form {
+    max-width: 500px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    text-align: left;
+} */
+
+footer form {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     text-align: left;
 }
 
-footer label {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    gap: 5px;
-}
-
-footer input, footer textarea {
+/* footer select {
     padding: 12px;
     border-radius: 4px;
     border: 1px solid #ccc;
     font-family: inherit;
     font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+} */
+
+/* footer label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 5px;
+} */
+
+footer label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #ecf0f1;
+}
+
+/* footer input, footer textarea {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+} */
+
+footer input, 
+footer select, 
+footer textarea {
+    width: 100%; /* Now respects the 450px container */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box; /* Crucial for padding/width math */
+}
+
+footer input, 
+footer select {
+    height: 45px;
+}
+
+footer input:focus, footer select:focus, footer textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
 footer textarea {
     height: 120px;
     resize: vertical; /* Allows user to grow height but not width */
-}
+} 
 
 footer button {
     background-color: #3498db;
     color: white;
-    padding: 12px;
+    padding: 12px 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1rem;
     transition: background 0.3s ease;
+    align-self: center; 
+    width: auto;
+    min-width: 120px;
 }
 
 footer button:hover {
